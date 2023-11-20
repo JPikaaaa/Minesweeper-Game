@@ -1,0 +1,62 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #87CEEB, #1E90FF); /* Gradient background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#game-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow for a card-like appearance */
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(25, 20px);
+    grid-gap: 1px;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999;
+    cursor: pointer;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.cell.revealed {
+    background-color: #ddd;
+}
+
+.cell.mine {
+    color: #fff;
+}
+
+.cell.flagged {
+    background-color: #0f0;
+    color: #fff;
+}
+
+.cell.clicked-mine {
+    color: #fff;
+    background-color: #f00;
+}
+
+#game-status {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#restart-button {
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
